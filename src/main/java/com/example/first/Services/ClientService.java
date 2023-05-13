@@ -16,6 +16,8 @@ public class ClientService {
     //444444
     @Autowired
     private ClientRepo clientre;
+
+    //this function occupied to return a client if he exist or return with null
     public ClientEntity getClient(Integer ID){
         Optional<ClientEntity> client =this.clientre.findById(ID);
         if(client.isPresent())
